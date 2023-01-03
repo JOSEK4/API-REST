@@ -31,9 +31,9 @@ const updateItem = (req: Request, res: Response) => {
 
 }
 
-const posItem = (req: Request, res: Response) => {
+const posItem = ( {body }: Request, res: Response) => {
     try { 
-
+        res.send(body);
     } catch (e) {
         handleHttp(res, "ERROR_POST_ITEM")
     }
@@ -51,4 +51,4 @@ const deleteItem = (req: Request, res: Response) => {
     
 };
 
-export default { getItem, getItems, updateItem, posItem, deleteItem };
+export  { getItem, getItems, updateItem, posItem, deleteItem };
